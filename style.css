@@ -543,6 +543,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5af19', end
   display: none;
 }
 
+.row > div > .photo, .row > .gradient-card, .row > div > h1, .row > div > div, .row > div > h3 {
+  opacity: 1;
+  transform: translate(0);
+  transition: opacity 1s, transform 1s;
+  -webkit-transition: opacity 1s, transform 1s;
+}
+.row > div > div {
+  transition-delay: 0.1s;
+  -webkit-transition-delay: 0.1s;
+}
+.row > div > h3 {
+  transition-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+}
+
+.row.scroll-hidden > div > h1, .row.scroll-hidden > div > .pretty-hr, .row.scroll-hidden > div > h3 {
+  opacity: 0;
+  transform: translate(-100px, 0);
+}
+.row.scroll-hidden > div > .photo, .row.scroll-hidden > .gradient-card {
+  opacity: 0;
+  transform: translate(0, -100px);
+}
+
 @media screen and (max-width: 1000px) {
   #header-right {
     height: auto;

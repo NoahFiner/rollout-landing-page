@@ -1,6 +1,16 @@
 $(document).ready(function() {
 
-  $(".container").addClass("scroll-hidden");
+  $(".row").addClass("scroll-hidden");
+
+  var updateScrollHiddens = function(scrollTop) {
+    if(!scrollTop) scrollTop = 0;
+    $(".scroll-hidden").each(function(i) {
+      if(scrollTop + 300 > $(this).position().top) {
+        $(this).removeClass("scroll-hidden");
+        return true;
+      }
+    })
+  }
 
   //set constant dimensions to contact-right to avoid weird animations
   // $("#contact-right, .form-lower").css("width", $("#contact-right").width()+"px");
@@ -51,8 +61,12 @@ $(document).ready(function() {
   }
   updateHeader();
 
+
+  updateScrollHiddens(window.scrollY);
+
   $(window).scroll(function() {
     updateHeader();
+    updateScrollHiddens(window.scrollY);
     if(window.scrollX > 0) {
       window.scrollTo(0, $(window).scrollTop());
     }
@@ -62,11 +76,4 @@ $(document).ready(function() {
   $(window).resize(function() {
     $("#hamburger-outer, #header-right").removeClass("expanded");
   });
-
-  // if on the order page, scroll down to the form
-  if($("#contact-upper").length !== 0 && scrollToOrder) {
-    $('html, body').animate({
-      scrollTop: $("#contact-upper").offset().top - 140
-    }, 500);
-  }
 });
