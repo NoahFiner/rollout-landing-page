@@ -792,6 +792,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5af19', end
     right: 2em !important;
   }
 
+  .header-icon {
+    height: 5rem !important;
+    width: 5rem !important;
+  }
+
   #header-logo-left > p, #header-logo-left > div {
     display: none;
   }
