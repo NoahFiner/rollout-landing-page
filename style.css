@@ -142,6 +142,10 @@ h3 > a:hover {
   color: #df2935;
 }
 
+.row > div > h3 {
+  font-family: "Helvetica", helvetica, arial, sans-serif !important;
+}
+
 body {
   background-color: #df2935;
   overflow-x: hidden;
@@ -760,6 +764,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5af19', end
 
   .content-center > h3, .content-center > h1,  {
     width: 100% !important;
+  }
+
+  .row > div > h1 {
+    font-size: 12.5vw;
+  }
+  .row > div:not(.person) > h3 {
+    font-size: 6vw;
+  }
+
+  .content-center > h1, .content-center > h3 {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+
+  .person > h3 {
+    font-size: 4vw;
   }
 }
 
