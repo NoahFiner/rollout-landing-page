@@ -1,27 +1,24 @@
-if(window.location.hash) {
-  //hash should be order-1, with the 1 corresponding to the value to set the order flavor to
-  var hash = window.location.hash.substr(1);
-  if(parseInt(hash.split("-")[1])) {
-    console.log('test');
-    scrollToOrder = true;
-    $("select[name='order-flavor'] option[value="+hash.split("-")[1]+"]").attr('selected', 'selected');
-  }
-}
-
 $(document).ready(function() {
+
+  $(".container").addClass("scroll-hidden");
 
   //set constant dimensions to contact-right to avoid weird animations
   // $("#contact-right, .form-lower").css("width", $("#contact-right").width()+"px");
   $("#contact-right").css("height", $("#contact-right").height()+"px");
 
-  if(window.location.hash) {
-    //hash should be order-1, with the 1 corresponding to the value to set the order flavor to
-    var hash = window.location.hash.substr(1);
-    if(parseInt(hash.split("-")[1])) {
-      console.log('test');
-      $("select[name='order-flavor'] option[value="+hash.split("-")[1]+"]").attr('selected', 'selected');
+  // smooth scrolling courtesy of https://stackoverflow.com/questions/4198041/jquery-smooth-scroll-to-an-anchor
+  $('a').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 100
+        }, 1000);
+        return false;
+      }
     }
-  }
+  });
 
   $("select[name='email-type']").change(function() {
     clearTimeout(emailChangeTimeout);
