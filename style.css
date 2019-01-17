@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,700|Quicksand:400,700');
-
 * {
   margin: 0;
   font-family: 'Poppins', 'HelveticaNeue', helvetica, Arial, sans-serif;
@@ -143,7 +141,7 @@ h3 > a:hover {
 }
 
 .row > div > h3 {
-  font-family: "Helvetica", helvetica, arial, sans-serif !important;
+  font-family: "Open Sans", "Poppins", "Helvetica", helvetica, arial, sans-serif !important;
 }
 
 body {
