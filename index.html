@@ -8,6 +8,31 @@
   <script src="jquery-3.2.1.min.js"></script>
   <script src="script.js"></script>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132698171-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-132698171-1');
+</script>
+
+<script>
+/**
+* Function that tracks a click on an outbound link in Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+* using 'navigator.sendBeacon' in browser that support it.
+*/
+var trackOutboundLink = function(url) {
+ ga('send', 'event', 'outbound', 'click', url, {
+   'transport': 'beacon',
+   'hitCallback': function(){document.location = url;}
+ });
+}
+</script>
+
   <!-- poppins -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -34,7 +59,7 @@
           <a class="header-link cool-hover" href="#the-app">The App</a>
           <a class="header-link cool-hover" href="#the-team">The Team</a>
           <a class="header-link cool-hover" href="#contact-us">Contact Us</a>
-          <a class="header-link cool-hover header-button" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSedZeVAdUgh_QZElyHLAL-ZlXADKc7kYnLBlTgGCnGVdPKLSg/viewform?usp=sf_link">Try our Alpha</a>
+          <a class="header-link cool-hover header-button" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSedZeVAdUgh_QZElyHLAL-ZlXADKc7kYnLBlTgGCnGVdPKLSg/viewform?usp=sf_link" onclick="trackOutboundLink('https://docs.google.com/forms/d/e/1FAIpQLSedZeVAdUgh_QZElyHLAL-ZlXADKc7kYnLBlTgGCnGVdPKLSg/viewform?usp=sf_link'); return false">Try our Alpha</a>
         </div>
         <div id="hamburger-outer">
           <div class="full-relative">
@@ -47,7 +72,7 @@
     </div>
     <div class="splash-main splash">
       <h1 id="main-header">The simplest way to order and deliver whatever you want.</h1>
-      <a class="splash-button" href="https://docs.google.com/forms/d/e/1FAIpQLSedZeVAdUgh_QZElyHLAL-ZlXADKc7kYnLBlTgGCnGVdPKLSg/viewform?usp=sf_link" target="_blank">Get information about our Alpha</a>
+      <a class="splash-button" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSedZeVAdUgh_QZElyHLAL-ZlXADKc7kYnLBlTgGCnGVdPKLSg/viewform?usp=sf_link" onclick="trackOutboundLink('https://docs.google.com/forms/d/e/1FAIpQLSedZeVAdUgh_QZElyHLAL-ZlXADKc7kYnLBlTgGCnGVdPKLSg/viewform?usp=sf_link'); return false">Get information about our Alpha</a>
       <svg width="100%" height="100%" viewBox="0 0 360 360" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"><path id="path1" d="M408,0c0,0 -110.438,-29.032 -183.12,-15.84c-72.682,13.192 -177.54,244.596 -47.076,279.36c130.464,34.764 120.087,94.973 21.036,131.52" stroke="#fff" fill="rgba(0,0,0,0)" stroke-width="15"/><path d="M312.96,290.16c0,0 198.912,-91.883 95.04,-153.84c-103.872,-61.957 -441.713,152.967 -390.24,27.96c51.473,-125.007 397.999,-91.942 303.12,-136.68c-94.879,-44.738 -314.107,-40.422 -244.56,-89.52" stroke="#fff" fill="rgba(0,0,0,0)" stroke-width="15" id="path2"/><path d="M305.28,241.2c0,0 -83.526,-372.775 -216.72,-213.6c-133.194,159.175 228.12,-81.768 249.6,0c21.48,81.768 -546.169,278.928 -314.16,262.56c232.009,-16.368 218.178,18.583 161.16,94.08" stroke="#fff" fill="rgba(0,0,0,0)" stroke-width="15" id="path3"/><path d="M-80.88,-11.944c0,0 205.268,254.769 383.76,126.064c178.492,-128.705 -305.268,-225.218 -172.32,-57c132.948,168.218 166.208,270.719 22.909,287.52c-143.299,16.801 -235.668,-234.444 -120.589,-139.211c115.079,95.234 688.394,-113.663 437.76,24.731c-250.634,138.394 -362.482,-131.837 -230.16,-73.68c132.322,58.157 -140.88,236.806 -140.88,236.806" stroke="#fff" fill="rgba(0,0,0,0)" stroke-width="15" id="path5"/><path d="M-21.36,27.6c0,0 31.781,109.481 136.08,66.24c104.299,-43.241 156.586,-0.956 163.92,70.44c7.334,71.396 140.4,28.2 140.4,28.2" stroke="#fff" fill="rgba(0,0,0,0)" stroke-width="15" id="path6"/></svg>
     </div>
     <div class="container">
@@ -147,19 +172,9 @@
         <a class="footer-link cool-hover" href="#the-app">The App</a>
         <a class="footer-link cool-hover" href="#the-team">The Team</a>
         <a class="footer-link cool-hover" href="#contact-us">Contact</a>
-        <a class="footer-link cool-hover" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSedZeVAdUgh_QZElyHLAL-ZlXADKc7kYnLBlTgGCnGVdPKLSg/viewform?usp=sf_link"><span style="font-weight: 900">Try our Alpha</span style="font-weight: 900"></a>
+        <a class="footer-link cool-hover" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSedZeVAdUgh_QZElyHLAL-ZlXADKc7kYnLBlTgGCnGVdPKLSg/viewform?usp=sf_link" onclick="trackOutboundLink('https://docs.google.com/forms/d/e/1FAIpQLSedZeVAdUgh_QZElyHLAL-ZlXADKc7kYnLBlTgGCnGVdPKLSg/viewform?usp=sf_link'); return false"><span style="font-weight: 900">Try our Alpha</span style="font-weight: 900"></a>
       </div>
     </div>
-
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132698171-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-132698171-1');
-    </script>
 
   </div>
 </body>
