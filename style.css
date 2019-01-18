@@ -261,7 +261,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5af19', end
   overflow: hidden;
 }
 
-.header-link:hover, .header-link:active {
+.header-link:hover, .header-link:active, .header-link:visited, .header-link:focus {
   color: #fff;
   text-decoration: none;
 }
