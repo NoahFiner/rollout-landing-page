@@ -5,7 +5,7 @@ $(document).ready(function() {
   var updateScrollHiddens = function(scrollTop) {
     if(!scrollTop) scrollTop = 0;
     $(".scroll-hidden").each(function(i) {
-      if(scrollTop + 300 > $(this).position().top) {
+      if(scrollTop + window.innerHeight - 300 > $(this).position().top) {
         $(this).removeClass("scroll-hidden");
         return true;
       }
