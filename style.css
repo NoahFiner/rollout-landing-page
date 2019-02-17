@@ -366,7 +366,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5af19', end
 }
 
 .content-center > h3 {
-  width: 60%;
+  width: 90%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -387,10 +387,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5af19', end
 .gradient-card > div {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f45ab1+0,ef2d30+100 */
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5af19+0,f12711+54,f12711+88,f12711+100 */
-background: #f5af19; /* Old browsers */
-background: -moz-linear-gradient(-45deg, #f5af19 0%, #f12711 54%, #f12711 88%, #f12711 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(-45deg, #f5af19 0%,#f12711 54%,#f12711 88%,#f12711 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(135deg, #f5af19 0%,#f12711 54%,#f12711 88%,#f12711 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+background: #f58218; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #f58218 0%, #f12711 54%, #f12711 88%, #f12711 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #f58218 0%,#f12711 54%,#f12711 88%,#f12711 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #f58218 0%,#f12711 54%,#f12711 88%,#f12711 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5af19', endColorstr='#f12711',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   outline: 0;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
@@ -434,7 +434,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5af19', end
 
 .content-left > h1 {
   text-align: left;
-  width: 70%;
+  width: 80%;
 }
 
 .content-left > .pretty-hr {
@@ -443,7 +443,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5af19', end
 
 .content-right > h1 {
   text-align: right;
-  width: 70%;
+  width: 80%;
 }
 
 .content-right > h3 {
